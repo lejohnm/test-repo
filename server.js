@@ -4,7 +4,7 @@
 //////   take notes!      ////
 /////////////////////////////
 
-require('dotenv').config()
+require('dotenv').config();
 const express = require("express");
 const MongoClient = require("mongodb").MongoClient
 const ObjectId = require('mongodb').ObjectId;
@@ -16,7 +16,7 @@ const app = express();
 // note with heroku deployment you must source port from env
 const port = process.env.PORT || 3000;
 
-// register middleware component
+// register middleware component and db
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
